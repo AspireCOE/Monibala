@@ -1,0 +1,27 @@
+body{
+background-color:#EDCBCB;
+}
+h1{
+font-family:algerian;
+text-align:center;
+letter-spacing:0.2em;
+background-color:yellow;
+}
+p{
+font-weight:bold;
+font-size:20px;
+font-family:times new roman;
+line-height:1.5em;
+}
+.c1
+{
+color:#EFF6F3;
+background-color:#35C3EE;
+}
+.container{
+width:50%;
+}
+.c3
+{
+text-align:center;
+}
