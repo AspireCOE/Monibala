@@ -1,1 +1,0 @@
-console.log("page successfully loaded script.js")
