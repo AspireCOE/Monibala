@@ -1,4 +1,4 @@
-const express = require('express');
+ const express = require('express');
 const bodyParser = require('body-parser');
 
 const axios=require('axios');
@@ -8,11 +8,11 @@ const port = 5000;
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static('public'));
-app.get('/', (req, res) => {
+app.get('/', (request, response) => {
     res.sendFile(__dirname + '/index.html');
 });
-app.post('/submit', (req, res) => {
-    const { username, password, mobile, email } = req.body;
+app.post('/submit', (request, response) => {
+    const { username, password, mobile, email } = request.body;
     const userdata={
         username,
         password,
@@ -21,20 +21,20 @@ app.post('/submit', (req, res) => {
     }
     
 axios.post("http://localhost:3000/users",userdata).then(data=>{
-    res.send("user data saved success")
-}).catch(err=>console.log("error saving the data",err))
+    respond.send("user data saved success")
+}).catch(error=>console.log("error saving the data",error))
 });
 
-app.get("/getuser",(req,res)=>{
+app.get("/getuser",(request,response)=>{
 
     axios.get("http://localhost:3000/users").then(dbresponse=>{
-        res.json(dbresponse.data)
-    }).catch(err=>{
-        console.log(err)
+        response.json(dbresponse.data)
+    }).catch(error=>{
+        console.log(error)
     })
 })
 
-app.post("/changePassword",(req,res)=>{
+app.post("/changePassword",(request,response)=>{
 
 const{id,pass}=req.body;
 const password={
@@ -44,8 +44,8 @@ const password={
 console.log(password);
 
 axios.patch(`http://localhost:3000/users/${id}`,password).then(dbresponse=>{
-    res.send("password updated")
-}).catch(err=>console.log(err))
+    response.send("password updated")
+}).catch(error=>console.log(err))
 
 
 })
@@ -58,7 +58,3 @@ app.listen(port, () => {
     console.log(`Server is listening at http://localhost:${port}`);
 });
 
-
-app.listen(port,()=>{
-    console.log(`Server is listening to the port ${port}`);
-});
