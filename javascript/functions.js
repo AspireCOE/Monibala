@@ -48,6 +48,15 @@ returnvalue(2)
 
 
 //callback function-fn as parameter
+function greet(name, callback) {
+    console.log('Hi' + ' ' + name);
+    callback();
+}
+function callMe() {
+    console.log('I am callback function');
+}
+
+greet('Peter', callMe);
 
 //higher order function
 //takes one or more function as argument
