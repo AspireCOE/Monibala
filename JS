@@ -1,0 +1,66 @@
+{
+  _id: new ObjectId('663b43fff4d3b68200f79f7a'),
+  personname: 'ram',
+  email: 'ram@gmail.com',
+  Age: 22,
+  certified: true,
+  skills: [
+    {
+      Name: 'java',
+      experience: 2,
+      proficiency: 'beginner',
+      _id: new ObjectId('663b43fff4d3b68200f79f7b')
+    },
+    {
+      Name: 'python',
+      experience: 3,
+      proficiency: 'intermediate',
+      _id: new ObjectId('663b43fff4d3b68200f79f7c')
+    }
+  ],
+  __v: 0
+}
+{
+  _id: new ObjectId('663c8f4eca5251952bf55c9b'),
+  personname: 'ram',
+  email: 'ram@gmail.com',
+  Age: 22,
+  certified: true,
+  skills: [
+    {
+      Name: 'java',
+      experience: 2,
+      proficiency: 'beginner',
+      _id: new ObjectId('663c8f4eca5251952bf55c9c')
+    },
+    {
+      Name: 'python',
+      experience: 3,
+      proficiency: 'intermediate',
+      _id: new ObjectId('663c8f4eca5251952bf55c9d')
+    }
+  ],
+  __v: 0
+}
+{
+  _id: new ObjectId('663c923915674f58fc583cfd'),
+  personname: 'ram',
+  email: 'ram@gmail.com',
+  Age: 22,
+  certified: true,
+  skills: [
+    {
+      Name: 'java',
+      experience: 2,
+      proficiency: 'beginner',
+      _id: new ObjectId('663c923915674f58fc583cfe')
+    },
+    {
+      Name: 'python',
+      experience: 3,
+      proficiency: 'intermediate',
+      _id: new ObjectId('663c923915674f58fc583cff')
+    }
+  ],
+  __v: 0
+}
