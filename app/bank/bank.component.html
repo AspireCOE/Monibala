@@ -1,0 +1,45 @@
+<p>bank works!</p>
+<h1 style="text-align:center">Bank</h1>
+<label for="Account Category">Choose Type of account </label>
+<select [(ngModel)]="typeInput">
+    <option>Current</option>
+    <option>Savings</option>
+    <option>NRI</option>
+    <option>Business</option>
+    <option>Student</option>
+</select>
+
+<br><br>
+<table border="1">
+    <thead>
+        <tr>
+            <th>Holder Name</th>
+            <th>Account Number</th>
+            <th>Account Type</th>
+            <th>Balance</th>
+            <th>Date of Joining</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for(Bank of bank;track Bank){
+        <tr>
+            @if(Bank.accountType==typeInput){
+               <td>{{Bank.HolderName}}</td>
+               <td>{{Bank.accountNumber}}</td>
+               <td>{{Bank.accountType}}</td>
+               <td>{{Bank.balance}}</td>
+               <td>{{Bank.dateOfJoining}}</td>
+               <td>@switch(getStatus(Bank.balance)){
+                @case('loyal'){Loyal}
+                @case('inactive'){Inactive}
+                @case('active'){Active}
+                @default{'Unknown'}
+            }
+               </td>
+            }
+        </tr>
+    }
+    </tbody>
+
+</table>
