@@ -1,11 +1,28 @@
-<h1>welcome to angular</h1>
-<div class="head" style="border : 2px solid rgb(105, 68, 68);height:100%"></div>
-
-<a style="font-size:30px;color: green;" [routerLink]="'shop'"> shop</a>&nbsp; &nbsp;;
-<a style="font-size:30px;color: brown;" [routerLink]="'product'">product</a>&nbsp;&nbsp;;
-<a style="font-size:30px;color: blueviolet;" [routerLink]="'bank'">bank</a>&nbsp;&nbsp;;
-<a style="font-size:30px;color: blue;" [routerLink]="'car'">car</a>&nbsp;&nbsp;;
-<a style="font-size:30px;color: blue;" [routerLink]="'pipes'">pipes</a>
-<div class="container" style="border : 2px solid rgb(239, 228, 228);height:100%">
-  <router-outlet></router-outlet>
+<div class="navbar-container container-fluid sticky-top">
+  <div class="row">
+    <div class="col-6 text-white">
+      <h1>ShopEase</h1>
+    </div>
+    <div class="col-6 d-flex justify-content-end my-3">
+      <ul class="navbar-list list-inline">
+        <li class="list-inline-item text-white">
+          <a [routerLink]="'/home'">Home</a>
+        </li>
+        <li class="list-inline-item text-white">
+          <a [routerLink]="'/product'">Product</a>
+        </li>
+        <li class="list-inline-item text-white">
+          <a [routerLink]="'/cart'">Cart</a>
+        </li>
+        <li class="list-inline-item text-white">
+          <a [routerLink]="'/aboutus'">About Us</a>
+        </li>
+        <li class="list-inline-item text-white">
+          <a [routerLink]="'/login'">Login</a>
+        </li>
+      </ul>
+    </div>
+  </div>
 </div>
+
+<router-outlet></router-outlet>
