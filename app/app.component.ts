@@ -1,21 +1,17 @@
 import { Component } from '@angular/core';
-import { RouterLink, RouterOutlet } from '@angular/router';
-import { StudentComponent } from './student/student.component';
-import { FormsModule } from '@angular/forms';
-import { ShopComponent } from './shop/shop.component';
-import { CarComponent } from './car/car.component';
-import { ProductComponent } from './product/product.component';
-import { BankComponent } from './bank/bank.component';
-import { AttributedirectiveComponent } from './attributedirective/attributedirective.component';
-import { ProductdetComponent } from './productdet/productdet.component';
+import { RouterModule, RouterOutlet } from '@angular/router';
+import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
+import { HomeComponent } from './home/home.component';
 import { HttpClientModule } from '@angular/common/http';
+
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,AttributedirectiveComponent,RouterLink,HttpClientModule,ProductdetComponent,StudentComponent,FormsModule,ShopComponent,CarComponent,BankComponent],
+  imports: [RouterOutlet,LoginComponent,SignupComponent,RouterModule,HomeComponent,HttpClientModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'application';
+  title = 'ShoppingApp';
 }

@@ -1,3 +1,39 @@
-.head{
-    font-size: large;
+body {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: white; /* Ensures text is readable */
+}
+body {
+  background-color: #f8f9fa; /* Light background color for the entire page */
+  color: #343a40; /* Dark color for text */
+}
+/* Navbar Styles */
+.navbar-container {
+  background-color: rgb(24, 109, 143);
+  padding: 10px 20px;
+}
+
+.navbar-container .text-white {
+  margin: 0;
+}
+
+.navbar-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navbar-list .list-inline-item {
+  margin: 0 10px;
+}
+
+.navbar-list .list-inline-item a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar-list .list-inline-item a:hover {
+  text-decoration: underline;
 }
