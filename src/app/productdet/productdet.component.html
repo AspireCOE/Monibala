@@ -1,0 +1,28 @@
+<p>productdet works!</p>
+<table>
+    <thead>
+        <tr>
+            <td>title</td>
+            <td>price</td>
+            <td>brand</td>
+            <td>category</td>
+            <td>images</td>
+        </tr>
+    </thead>
+    <tbody>
+        @for(product of productdata;track product){
+            <tr>
+                <td>{{product.title}}</td>
+                <td>{{product.price}}</td>
+                <td>{{product.brand}}</td>
+                <td>{{product.category}}</td>
+                @for(images of product.images;track images){
+                    <td>
+                        images
+                    </td>
+                
+                }
+            </tr>
+        }
+    </tbody>
+</table>

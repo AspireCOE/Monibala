@@ -1,0 +1,42 @@
+<p>product works!</p>
+<p>product works!</p>
+<table>
+    <thead>
+        <tr>
+            <th>
+                product_id
+            </th>
+            <th>
+                productName
+            </th>
+            <th>
+                cost
+            </th>
+            <th>
+                category
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (product of products;track product){
+            <tr>
+                @if(product.cost>1000){
+                <td>
+                    {{product.productId}}
+                </td>
+                <td>
+                    {{product.productName}}
+                </td>
+                <td>
+                    {{product.cost}}
+                </td>
+                <td>
+                    {{product.category}}
+                </td>
+            }
+            </tr>
+        }
+    
+    </tbody>
+</table>
+products:{{products|json}}

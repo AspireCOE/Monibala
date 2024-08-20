@@ -1,0 +1,44 @@
+<p>product works!</p>
+choose Category:<select [(ngmodel)]="categoryInput">
+    <option>Electronics</option>
+    <option>beverages</option>
+    <option>mobile</option>
+</select>
+<table>
+    <thead>
+        <tr>
+            <th>
+                product_id
+            </th>
+            <th>
+                productName
+            </th>
+            <th>
+                cost
+            </th>
+            <th>
+                category
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (product of products;track product){
+            <tr>
+                @if(product.category==categoryInput){
+                <td>
+                    {{product.productId}}
+                </td>
+                <td>
+                    {{product.productName}}
+                </td>
+                <td>
+                    {{product.cost}}
+                </td>
+                <td>
+                    {{product.category}}
+                </td>
+            }
+            </tr>
+        }
+    </tbody>
+</table>
